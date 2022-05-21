@@ -2,7 +2,6 @@ import React from 'react'
 import * as S from './styled'
 import { useState, useEffect } from 'react'
 import { APIKey } from '../../config/key'
-import SearchMovie from '../searchMovie'
 
 function Movies() {
 
