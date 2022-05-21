@@ -1,11 +1,11 @@
 import React from "react";
-import Header from "./components/header";
+import MovieList from "./components/movieList";
 import { Wrapper } from "./styles";
 
 function App() {
   return (
     <Wrapper>
-      <Header />
+      <MovieList />
     </Wrapper>
   );
 
