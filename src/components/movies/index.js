@@ -2,22 +2,23 @@ import React from 'react'
 import * as S from './styled'
 import { useState, useEffect } from 'react'
 import { APIKey } from '../../config/key'
+import SearchMovie from '../searchMovie'
 
 function Movies() {
- 
+
   const [movies, setMovies] = useState([])
   const image_path = "https://image.tmdb.org/t/p/w500";
-  const movie_name = "homem aranha"
+  const movie_name = "pantera negra"
+  
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&language=pt-br&query=${movie_name}&include_adult=false`)
       .then(response => response.json())
       .then(data => {
-        setMovies(data.results)
-        console.log(data.results);})
+        setMovies(data.results);})
   }, [])
   
-  return (
+  return ( 
     <ul>
     {movies.map(movie => {
       return (

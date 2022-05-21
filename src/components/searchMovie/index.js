@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styled'
 
-function SearchMovie({value, onChange}) {
+function SearchMovie({value, onChange, onButtonClick}) {
   function handleChange(event){
     onChange(event.target.value)
   }
@@ -14,7 +14,7 @@ function SearchMovie({value, onChange}) {
         value={value}
         onChange={handleChange}
       />
-      <button>Buscar</button>            
+      <button onClick={() => onButtonClick()}>Buscar</button>            
     </S.Wrapper>
   )
 }
