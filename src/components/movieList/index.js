@@ -19,7 +19,6 @@ function MovieList() {
       fetch(`https://api.themoviedb.org/3/search/movie?api_key=${APIKey}&language=pt-br&query=${text}&include_adult=false`)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response.results);
         setMovies(response.results)
       })
     }
