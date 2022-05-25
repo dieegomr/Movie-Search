@@ -9,7 +9,7 @@ function Movie(props) {
 
   return (
           <S.MoviePoster>
-          <Link to={`/MovieList/${movie.id}`}>
+          <Link to={`/MovieInfo/${movie.id}`}>
             <img src={`${image_path}${movie.poster_path}`} alt="imagem do filme" />
           </Link>
           <span>{movie.title}</span>
